@@ -1,1 +1,7 @@
-%p こんにちは
+.container
+  %p こんにちは 
+  - if user_signed_in?
+    %p #{link_to 'こちら', destroy_user_session_path, method: :delete}からログアウトする
+  - else
+    %p #{link_to 'こちら', new_user_session_path}からログインしてください
+  = link_to '投稿する', new_article_path

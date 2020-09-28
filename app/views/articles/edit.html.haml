@@ -1,0 +1,5 @@
+.container 
+  = form_with(model: @article, local: true) do |f|
+    %div
+      = f.text_area :content, class: 'text'
+    = f.submit '送信', class: 'submitbtn'
