@@ -1,0 +1,27 @@
+.article {
+    &_index {
+        border-bottom: 1px solid red;
+        position: relative;
+
+        &_destroy {
+            position: absolute;
+            right: 0;
+
+            &_item {
+                color: white;
+                display: none;
+                background-color: black;
+                text-align: center;
+                width: 100px;
+                height: 30px;
+                position: absolute;
+                left: 50%;
+                margin-left: -25px;
+            }
+        }
+    }
+}
+
+.article_index_destroy:hover .article_index_destroy_item {
+    display: block;
+}

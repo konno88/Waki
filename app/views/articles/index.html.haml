@@ -1,0 +1,10 @@
+.container
+  .article
+    - @articles.each do |article|
+      .article_index
+        .article_index_destroy
+          %i.far.fa-times-circle
+          .article_index_destroy_item
+            = link_to '削除する', article_path(id: article.id), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
+        = link_to edit_article_path(id: article.id) do   
+          %p= article.content
