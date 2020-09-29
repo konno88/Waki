@@ -1,0 +1,10 @@
+.container
+  .profile
+    .profile_name 
+      %p= current_user.display_name
+    .profile_gender
+      %p= current_user.display_gender
+    .profile_edit
+      = link_to '編集する', edit_profile_path
+      
+      

@@ -1,0 +1,13 @@
+.container
+  = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    .profileEdit
+      %div
+        = f.label :nickname, '名前', class: 'profileEdit_name'
+      %div
+        = f.text_field :nickname, class: 'profileEdit_name_text'
+      %div
+        = f.label :gender, '性別', class: 'profileEdit_gender'
+      %div
+        = f.select :gender, Profile.genders.map {|k, v| [I18n.t("enum.genders.#{k}"), k]}, {}, {class: 'profileEdit_gender_text'}
+      %div
+        = f.submit '保存', class: 'profileEdit_save'

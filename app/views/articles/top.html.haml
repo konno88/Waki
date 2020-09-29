@@ -4,4 +4,9 @@
     %p #{link_to 'こちら', destroy_user_session_path, method: :delete}からログアウトする
   - else
     %p #{link_to 'こちら', new_user_session_path}からログインしてください
-  = link_to '投稿する', new_article_path
+  .top
+    .top_item
+      = link_to '投稿する', new_article_path
+    .top_item
+      = link_to '投稿内容一覧', articles_path
+  = link_to 'プロフィール', profile_path
