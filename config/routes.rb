@@ -4,4 +4,5 @@ Rails.application.routes.draw do
    root to: 'articles#top'
 
    resources :articles
+   resource :profile, only: [:show, :edit, :update]
 end

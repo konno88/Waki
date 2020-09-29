@@ -12,6 +12,9 @@
     %script{:crossorigin => "anonymous", :src => "https://kit.fontawesome.com/abaca9e9d6.js"}
   %body
     .container
+      = link_to root_path do
+        .homeicon
+          %span.fa.fa-home
       - if flash.present?
         .flash
           - flash.each do |key, value|

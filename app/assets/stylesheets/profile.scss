@@ -1,0 +1,22 @@
+.profile {
+    background-color: lightgreen;
+
+    &_name {
+        border-bottom: 1px solid rebeccapurple;
+    }
+
+    &_gender {
+        border-bottom: 1px solid rebeccapurple;
+    }
+
+    &_edit a {
+        background-color: #fff;
+        border: 1px solid blue;
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        right: 5%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
