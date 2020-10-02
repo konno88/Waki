@@ -6,5 +6,5 @@
           %i.far.fa-times-circle
           .article_index_destroy_item
             = link_to '削除する', article_path(id: article.id), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
-        = link_to edit_article_path(id: article.id) do   
+        = link_to account_path(id: article.user.id) do   
           %p= article.content
