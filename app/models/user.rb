@@ -18,4 +18,5 @@ class User < ApplicationRecord
   def display_gender
     profile&.gender || '不明'
   end
+
 end
