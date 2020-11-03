@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
    resources :articles
    resource :profile, only: [:show, :edit, :update]
-   resources :accounts, only: [:show]
+   resources :accounts, only: [:show, :index]
+   resources :rooms, only: [:show, :create]
+   resources :messages, only: [:create]
 end

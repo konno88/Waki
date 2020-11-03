@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :articles, dependent: :destroy
   has_one :profile, dependent: :destroy
+  has_many :entries
+  has_many :rooms, through: :entries
 
   def prepare_profile
     profile || build_profile

@@ -1,0 +1,4 @@
+.container
+  - @users.each do |user|
+    = link_to account_path(id: user.id) do
+      = user.display_name
