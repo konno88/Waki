@@ -4,3 +4,12 @@
       %p= @user.display_name
     .profile_gender
       %p= @user.display_gender
+    .profile_ToRoom
+      - unless @user.id == current_user.id
+        - if @isRoom == true
+          = link_to 'チャットへ', "/rooms/#{@roomId}"
+        - else
+          = form_for @room do |f|
+            = fields_for @entry do |e|
+              = e.hidden_field :user_id, value: @user.id
+            = f.submit 'チャットへ', class: 'profile_edit'
