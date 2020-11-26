@@ -4,6 +4,7 @@
       %p= @user.display_name
     .profile_gender
       %p= @user.display_gender
+      %p= @user.email
     .profile_ToRoom
       - unless @user.id == current_user.id
         - if @isRoom == true
