@@ -8,3 +8,4 @@
             = link_to '削除する', article_path(id: article.id), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
         = link_to account_path(id: article.user.id) do   
           %p= article.content
+          %p= article.user_email
